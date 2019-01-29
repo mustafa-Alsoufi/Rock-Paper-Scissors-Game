@@ -12,14 +12,14 @@ public class rnd extends RPS_gameV2  {
 	static ImageIcon[] list = {rr, pr, sr};
     static final JLabel fresult = new JLabel();
 
-	static int rand = new Random().nextInt(list.length);
-	static Icon random = (list[rand]);
+    static int rand = new Random().nextInt(list.length);
+    static Icon random = (list[rand]);
 	
 	static Font newf = new Font("Microsoft Sans Serif",Font.ROMAN_BASELINE,45);
 	
 	public static Icon rRandom()
-	{
-		
+	
+	{	
 		if (random.equals(rr))
 		{
 			fresult.setText("It's a tie");
@@ -53,7 +53,6 @@ public class rnd extends RPS_gameV2  {
 		
 	public static Icon pRandom()
 	{
-
 		if (random.equals(rr))
 		{
 			fresult.setText("You Won");
@@ -83,12 +82,13 @@ public class rnd extends RPS_gameV2  {
 	
 	public static Icon sRandom()
 	{
+	
 		
 		
 		if (random.equals(rr))
 		{
-			RPS_gameV2.ul++;
-			fresult.setText("You Lost"+RPS_gameV2.ul);
+			fresult.setText("You Lost");
+			cmp.setText(String.valueOf(++(RPS_gameV2.ul)));
 
 
 		}

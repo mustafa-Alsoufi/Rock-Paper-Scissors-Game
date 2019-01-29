@@ -27,8 +27,5 @@ public class paper implements ActionListener
 		cres.setBounds(5, 290,230, 170);
 		
 		rnd.pRandom();
-		
-		
-	
 	}
 }

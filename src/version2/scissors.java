@@ -28,10 +28,7 @@ public class scissors implements ActionListener
 		RPS_gameV2.page1.setBackground(RPS_gameV2.mainColr);
 		RPS_gameV2.cres.setBounds(5, 300,230, 170);
 		
-		rnd.sRandom();
-
-		
-		
+		rnd.sRandom();	
 	}
 }
 	

@@ -10,6 +10,7 @@ import java.awt.event.FocusListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.net.URL;
+import java.util.Random;
 
 import javax.swing.*;
 
@@ -21,7 +22,7 @@ public class RPS_gameV2 {
 	static int y=170;
 	
 	static Color mainColr = Color.decode("#5F9EA0");
-	static JFrame frame = new JFrame();
+	static JFrame frame = new JFrame("Rock-Paper-Scissor");
 	static Font font = new Font("Microsoft Sans Serif",Font.ROMAN_BASELINE,20);
 	static JLabel logo = new JLabel();
 	static JTextField text = new JTextField("Enter Your Name: ");
@@ -161,7 +162,7 @@ public RPS_gameV2()
 
 	text.setBounds(50, 340,450,50);
 	text.setFont(font);
-	text.setBorder(null);
+	//text.setBorder(null);
 	
 	// Changing the position of the Text Box 
 	mainB.setBounds(180, 400,180,70);
@@ -178,15 +179,14 @@ public RPS_gameV2()
 	    	 mainB.setBorderPainted(true);
 	         mainB.setContentAreaFilled(false);
 	         mainB.setForeground(buttonColr);
-	         mainB.setBorder(new RoundedBorder(55)); //10 is the radius
-
+	         mainB.setBorder(new RoundedBorder(10)); 
 	     }
 	     public void mouseExited(MouseEvent me) {
 	    	 mainB.setFocusPainted(true);
 	    	 mainB.setBorderPainted(true);
 	    	 mainB.setContentAreaFilled(true);
 	    	 mainB.setForeground(Color.black);
-	    	 mainB.setBorder(new RoundedBorder(0)); //10 is the radius
+	    	 mainB.setBorder(new RoundedBorder(0)); 
 	      }
 	});
 	
@@ -230,6 +230,8 @@ public static class mBut implements ActionListener
 		{}
 		else 
 		{
+			
+			//page1.setVisible(false);
 			Color bkground = Color.decode("#c8f1ef");
 
 			rock rPress = new rock();
@@ -315,17 +317,18 @@ public static class mBut implements ActionListener
 			iconA.setBounds(500, 15,60, 70);
 
 			
-			//I need to figure out some way to post the result plus the name of the user just beside the user icon
+			// Set a code for the text's color
 			
 			Color txtScore = Color.decode("#c8f1ef");
 
-			
+			// Print out the result for the user's score 
 			user.setText("<html>"+text.getText()+"<br> "+ (uw) +" </html>");
 		    user.setForeground(txtScore);
 			user.setBounds(90, 10,120, 70);
 			page2.add(user);
 			user.setFont(font);
-			
+			// Print out the result for the Computer's score 
+
 			cmp.setText("<html>"+"<br> "+ (ul) +" </html>");
 			cmp.setForeground(txtScore);
 			cmp.setBounds(480, 10,120, 70);
@@ -343,9 +346,6 @@ public static class mBut implements ActionListener
 	}
 	
 }
-
-
-
 }
 
 	
